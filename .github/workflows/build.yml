@@ -22,7 +22,6 @@ jobs:
     - name: Unzip Template
       run: |
         unzip -o breakable-bedrock-template-1.20.1.zip
-        cp -r breakable-bedrock-template-1.20.1/* .
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
@@ -35,4 +34,3 @@ jobs:
       with:
         name: Compiled-Mod
         path: build/libs/*.jar
-        
