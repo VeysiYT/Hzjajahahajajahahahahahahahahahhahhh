@@ -23,6 +23,10 @@ jobs:
       run: |
         unzip -o breakable-bedrock-template-1.20.1.zip
 
+    - name: Fix Mixin Filename
+      run: |
+        mv src/main/java/com/forsekany/breakable_bedrock/mixin/ExampleMixin.java src/main/java/com/forsekany/breakable_bedrock/mixin/AbstractBlockMixin.java || true
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
